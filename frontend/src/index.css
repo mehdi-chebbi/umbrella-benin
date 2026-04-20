@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #05966933;
+    color: #047857;
+  }
+}
+
+@layer components {
+  /* Frosted glass effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Gold gradient text */
+  .text-gold {
+    background: linear-gradient(135deg, #C5A55A, #A68B3C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gold gradient border */
+  .border-gold {
+    border-image: linear-gradient(135deg, #C5A55A, #A68B3C) 1;
+  }
+
+  /* Scroll reveal initial states */
+  .reveal-hidden {
+    opacity: 0;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal-hidden-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal-hidden-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal-hidden-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  /* Card hover lift */
+  .card-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Button interactions */
+  .btn-interactive {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn-interactive:hover {
+    filter: brightness(1.05);
+  }
+
+  .btn-interactive:active {
+    transform: scale(0.97);
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #F0F7F3;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #94A3B8;
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #6B5B50;
+  }
+}
+
+/* Global scrollbar */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #FAFDF7;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #C5A55A44;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #C5A55A88;
+}
+
+/* Hero landscape decoration */
+.hero-landscape {
+  background: linear-gradient(
+    180deg,
+    #064E3B 0%,
+    #047857 30%,
+    #059669 55%,
+    #10B981 75%,
+    #FAFDF7 100%
+  );
+}
+
+/* Decorative dot pattern */
+.dot-pattern {
+  background-image: radial-gradient(circle, #C5A55A22 1px, transparent 1px);
+  background-size: 24px 24px;
+}
