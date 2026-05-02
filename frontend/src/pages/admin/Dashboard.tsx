@@ -24,7 +24,7 @@ export default function Dashboard() {
     {
       icon: BarChart3,
       label: 'Indicateurs',
-      value: '\u2014',
+      value: '—',
       description: 'Indicateurs NDT configurés',
     },
     {

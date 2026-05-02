@@ -8,7 +8,6 @@ import {
   Target,
   Settings,
   ChevronRight,
-  Info,
 } from 'lucide-react';
 import ScrollReveal from '../components/ui/ScrollReveal';
 
@@ -25,14 +24,14 @@ const objectifs = [
     number: '02',
     title: 'Améliorer les conditions de vie',
     description:
-      "Contribuer à l\u2019amélioration des conditions de vie des populations affectées par la dégradation des terres. La résilience des communautés dépend directement de la santé des terres qu\u2019elles exploitent.",
+      "Contribuer à l’amélioration des conditions de vie des populations affectées par la dégradation des terres. La résilience des communautés dépend directement de la santé des terres qu’elles exploitent.",
   },
   {
     icon: CloudSun,
     number: '03',
     title: 'Atténuation de la sécheresse',
     description:
-      'Renforcer la résilience face à la sécheresse et aux effets des changements climatiques sur les terres. Ce objectif encourage l\u2019adoption de systèmes d\u2019alerte précoce et de pratiques d\u2019adaptation.',
+      'Renforcer la résilience face à la sécheresse et aux effets des changements climatiques sur les terres. Ce objectif encourage l’adoption de systèmes d’alerte précoce et de pratiques d’adaptation.',
   },
   {
     icon: Globe,
@@ -53,7 +52,7 @@ const objectifs = [
     number: '06',
     title: 'Cibles volontaires de NDT',
     description:
-      "Établir des cibles volontaires de neutralité en matière de dégradation des terres conformément à la CNULD. Les pays parties s\u2019engagent à atteindre un équilibre entre dégradation et réhabilitation des terres.",
+      "Établir des cibles volontaires de neutralité en matière de dégradation des terres conformément à la CNULD. Les pays parties s’engagent à atteindre un équilibre entre dégradation et réhabilitation des terres.",
   },
   {
     icon: Settings,
@@ -85,23 +84,10 @@ export default function Indicateurs() {
             </h1>
             <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
               Les indicateurs de Neutralité en matière de Dégradation des
-              Terres permettent de mesurer les progrès vers l\u2019atteinte de la
+              Terres permettent de mesurer les progrès vers l’atteinte de la
               neutralité conformément aux objectifs de la CNULD.
             </p>
           </ScrollReveal>
-        </div>
-      </div>
-
-      {/* Info banner */}
-      <div className="bg-accent/10 border-b border-accent/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-start gap-3">
-            <Info className="w-5 h-5 text-accent-dark mt-0.5 shrink-0" />
-            <p className="text-sm text-accent-dark">
-              Les données des indicateurs seront disponibles prochainement.
-              Le système de collecte et de visualisation est actuellement en cours de développement.
-            </p>
-          </div>
         </div>
       </div>
 
@@ -111,7 +97,7 @@ export default function Indicateurs() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-brown mb-4">
-                Les 7 Objectifs Stratégiques de l\u2019UNCCD
+                Les 7 Objectifs Stratégiques de l’UNCCD
               </h2>
               <div className="flex items-center justify-center gap-2 mb-4">
                 <div className="w-8 h-[2px] bg-accent/40" />
@@ -119,7 +105,7 @@ export default function Indicateurs() {
                 <div className="w-8 h-[2px] bg-accent/40" />
               </div>
               <p className="text-brown-light text-lg max-w-2xl mx-auto">
-                Chaque objectif stratégique est accompagné d\u2019indicateurs
+                Chaque objectif stratégique est accompagné d’indicateurs
                 spécifiques permettant le suivi des progrès réalisés.
               </p>
             </div>
@@ -152,12 +138,7 @@ export default function Indicateurs() {
                         </p>
                       </div>
 
-                      {/* Status badge */}
-                      <div className="md:mt-1">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cream text-brown-light">
-                          Prochainement
-                        </span>
-                      </div>
+
                     </div>
                   </div>
                 </ScrollReveal>

@@ -12,18 +12,18 @@ const partenaires = [
   {
     icon: Landmark,
     name: 'FEM/GEF',
-    fullName: 'Fonds pour l\u2019Environnement Mondial',
+    fullName: 'Fonds pour l’Environnement Mondial',
     description: 'Financement du projet',
   },
   {
     icon: Globe2,
     name: 'PNUE/UNEP',
-    fullName: 'Programme des Nations Unies pour l\u2019Environnement',
+    fullName: 'Programme des Nations Unies pour l’Environnement',
     description: 'Mise en œuvre du projet',
   },
   {
     icon: Building2,
-    name: 'Ministère de l\u2019Environnement',
+    name: 'Ministère de l’Environnement',
     fullName: 'République du Bénin',
     description: 'Partenaire national',
   },

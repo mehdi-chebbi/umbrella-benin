@@ -1,4 +1,4 @@
-import { BarChart3, TrendingUp, MapPin, Clock } from 'lucide-react';
+import { BarChart3, TrendingUp, MapPin } from 'lucide-react';
 import SectionTitle from '../ui/SectionTitle';
 import ScrollReveal from '../ui/ScrollReveal';
 
@@ -6,20 +6,20 @@ const kpis = [
   {
     icon: BarChart3,
     label: 'Indicateurs NDT',
-    value: '\u2014',
+    value: '—',
     detail: '7 objectifs stratégiques',
   },
   {
     icon: TrendingUp,
     label: 'Données collectées',
-    value: '\u2014',
-    detail: 'Prochainement',
+    value: '—',
+    detail: 'En cours',
   },
   {
     icon: MapPin,
     label: 'Sites de suivi',
-    value: '\u2014',
-    detail: 'Prochainement',
+    value: '—',
+    detail: 'En cours',
   },
 ];
 
@@ -28,8 +28,8 @@ export default function DashboardPreview() {
     <section className="py-20 md:py-28 bg-ivory">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Tableau de Bord \u2014 Bientôt Disponible"
-          subtitle="Le tableau de bord interactif pour le suivi des indicateurs NDT sera bientôt disponible."
+          title="Tableau de Bord NDT"
+          subtitle="Le tableau de bord interactif pour le suivi des indicateurs de Neutralité en matière de Dégradation des Terres."
         />
 
         <ScrollReveal>
@@ -43,10 +43,7 @@ export default function DashboardPreview() {
                     Tableau de Bord NDT
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-brown-light">
-                  <Clock className="w-3 h-3" />
-                  <span>Prochainement</span>
-                </div>
+
               </div>
 
               {/* KPI cards */}

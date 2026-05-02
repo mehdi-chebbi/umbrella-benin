@@ -7,7 +7,7 @@ const pillars = [
     icon: Eye,
     title: 'Surveillance',
     description:
-      'Suivi continu de l\u2019état de dégradation des terres à travers des indicateurs clés et des outils de télédétection.',
+      'Suivi continu de l’état de dégradation des terres à travers des indicateurs clés et des outils de télédétection.',
   },
   {
     icon: BarChart3,
@@ -35,7 +35,7 @@ export default function MissionSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="Notre Mission"
-          subtitle="Le Projet UMBRELLA vise à établir un système robuste de suivi et d\u2019évaluation de la dégradation des terres au Bénin, contribuant ainsi à l\u2019atteinte de la neutralité."
+          subtitle="Le Projet UMBRELLA vise à établir un système robuste de suivi et d’évaluation de la dégradation des terres au Bénin, contribuant ainsi à l’atteinte de la neutralité."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">

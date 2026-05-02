@@ -9,9 +9,9 @@ const navigationLinks = [
 
 const partenaires = [
   { name: 'OSS', fullName: 'Observatoire du Sahara et du Sahel' },
-  { name: 'FEM/GEF', fullName: 'Fonds pour l\u2019Environnement Mondial' },
+  { name: 'FEM/GEF', fullName: 'Fonds pour l’Environnement Mondial' },
   { name: 'PNUE/UNEP', fullName: 'Programme des Nations Unies' },
-  { name: 'Ministère', fullName: 'Ministère de l\u2019Environnement' },
+  { name: 'Ministère', fullName: 'Ministère de l’Environnement' },
 ];
 
 export default function Footer() {
@@ -28,9 +28,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-4">
-              Projet de suivi et d\u2019évaluation des indicateurs de
+              Projet de suivi et d’évaluation des indicateurs de
               Neutralité en matière de Dégradation des Terres
-              au Bénin, en collaboration avec l\u2019OSS, le FEM et le PNUE.
+              au Bénin, en collaboration avec l’OSS, le FEM et le PNUE.
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export default function Footer() {
                 <span>
                   Cotonou, République du Bénin
                   <br />
-                  Ministère de l\u2019Environnement, de l\u2019Agriculture et de l\u2019Élevage
+                  Ministère de l’Environnement, de l’Agriculture et de l’Élevage
                 </span>
               </li>
               <li className="flex items-center gap-2 text-white/70 text-sm">

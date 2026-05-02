@@ -23,7 +23,7 @@ const objectifs = [
     icon: Heart,
     title: 'Améliorer les conditions de vie',
     description:
-      "Contribuer à l\u2019amélioration des conditions de vie des populations affectées par la dégradation des terres.",
+      "Contribuer à l’amélioration des conditions de vie des populations affectées par la dégradation des terres.",
   },
   {
     number: '03',
@@ -67,7 +67,7 @@ export default function ObjectifsSection() {
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Les 7 Objectifs Stratégiques de l\u2019UNCCD"
+          title="Les 7 Objectifs Stratégiques de l’UNCCD"
           subtitle="La Convention des Nations Unies sur la lutte contre la désertification définit 7 objectifs stratégiques pour la période 2018-2030."
         />
 

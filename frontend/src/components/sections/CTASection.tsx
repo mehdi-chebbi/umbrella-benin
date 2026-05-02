@@ -14,9 +14,9 @@ export default function CTASection() {
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <ScrollReveal>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-            Accédez à l\u2019Espace
+            Accédez à l’Espace
             <br />
-            d\u2019Administration
+            d’Administration
           </h2>
           <p className="text-lg text-white/80 font-body max-w-xl mx-auto mb-10 leading-relaxed">
             Connectez-vous pour accéder au tableau de bord de gestion du

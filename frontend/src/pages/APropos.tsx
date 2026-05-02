@@ -17,7 +17,7 @@ const partiesPrenantes = [
   },
   {
     abbr: 'DGACTA',
-    name: 'Direction Générale de l\u2019Aménagement et de la Conservation des Terres Agricoles',
+    name: 'Direction Générale de l’Aménagement et de la Conservation des Terres Agricoles',
     description: 'Gestion durable des terres agricoles.',
   },
   {
@@ -41,7 +41,7 @@ const phases = [
   {
     phase: 'Phase I',
     title: 'Mise en place et collecte initiale',
-    periode: '2024 \u2013 2025',
+    periode: '2024 – 2025',
     items: [
       'Installation du cadre institutionnel',
       'Collecte des données de référence',
@@ -52,7 +52,7 @@ const phases = [
   {
     phase: 'Phase II',
     title: 'Opérationnalisation et rapportage',
-    periode: '2025 \u2013 2027',
+    periode: '2025 – 2027',
     items: [
       'Suivi continu des indicateurs NDT',
       'Production des rapports nationaux',
@@ -102,13 +102,13 @@ export default function APropos() {
               </h2>
               <div className="space-y-4 text-brown-light leading-relaxed">
                 <p>
-                  Le Projet UMBRELLA est une initiative conjointe de l\u2019Observatoire du
-                  Sahara et du Sahel (OSS), du Fonds pour l\u2019Environnement Mondial (FEM)
-                  et du Programme des Nations Unies pour l\u2019Environnement (PNUE).
+                  Le Projet UMBRELLA est une initiative conjointe de l’Observatoire du
+                  Sahara et du Sahel (OSS), du Fonds pour l’Environnement Mondial (FEM)
+                  et du Programme des Nations Unies pour l’Environnement (PNUE).
                 </p>
                 <p>
                   Son objectif principal est de développer un système de suivi et
-                  d\u2019évaluation des indicateurs de Neutralité en matière de
+                  d’évaluation des indicateurs de Neutralité en matière de
                   Dégradation des Terres (NDT) au Bénin, en conformité avec les
                   obligations de la Convention des Nations Unies sur la lutte contre
                   la désertification (CNULD).
@@ -131,7 +131,7 @@ export default function APropos() {
                 </div>
                 <ul className="space-y-4">
                   {[
-                    'Suivi des 7 objectifs stratégiques de l\u2019UNCCD',
+                    'Suivi des 7 objectifs stratégiques de l’UNCCD',
                     'Collecte et analyse des données de terrain',
                     'Rapportage conforme aux standards internationaux',
                     'Renforcement des capacités nationales',
@@ -163,7 +163,7 @@ export default function APropos() {
                   La Convention des Nations Unies sur la lutte contre la
                   désertification (CNULD) a établi le concept de Neutralité en
                   matière de Dégradation des Terres (NDT) comme objectif mondial.
-                  La NDT implique de maintenir ou d\u2019améliorer la quantité et la
+                  La NDT implique de maintenir ou d’améliorer la quantité et la
                   qualité des terres productives.
                 </p>
               </div>
@@ -178,15 +178,15 @@ export default function APropos() {
               </h2>
               <div className="space-y-4 text-brown-light leading-relaxed">
                 <p>
-                  Le Bénin, situé en Afrique de l\u2019Ouest, fait face à une
+                  Le Bénin, situé en Afrique de l’Ouest, fait face à une
                   dégradation accélérée de ses terres due à la combinaison de
                   facteurs climatiques et anthropiques. La déforestation,
-                  l\u2019érosion, la salinisation et l\u2019épuisement des sols menacent
+                  l’érosion, la salinisation et l’épuisement des sols menacent
                   la sécurité alimentaire et les moyens de subsistance des
                   populations.
                 </p>
                 <p>
-                  En tant que partie à la CNULD, le Bénin s\u2019est engagé à
+                  En tant que partie à la CNULD, le Bénin s’est engagé à
                   atteindre la neutralité en matière de dégradation des terres.
                   Le Projet UMBRELLA fournit le cadre technique et institutionnel
                   nécessaire pour mesurer les progrès et orienter les actions.
