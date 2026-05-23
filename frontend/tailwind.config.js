@@ -28,6 +28,20 @@ export default {
         gray: '#94A3B8',
         border: '#E2E8F0',
         destructive: '#DC2626',
+        /* Umbrella aliases (Tunisia compatibility) */
+        umbrella: {
+          accent: '#059669',
+          'accent-light': '#d1fae5',
+          dark: '#064E3B',
+          bg: '#FAFDF7',
+          'bg-alt': '#F0F7F3',
+          text: '#3D2B1F',
+          'text-secondary': '#6B5B50',
+          'text-light': '#94A3B8',
+          border: '#E2E8F0',
+          warm: '#C5A55A',
+          'warm-light': '#fef3c7',
+        },
       },
       fontFamily: {
         heading: ['Lexend', 'sans-serif'],
@@ -40,6 +54,7 @@ export default {
         slideInRight: 'slideInRight 0.6s ease-out forwards',
         bounceSlow: 'bounceSlow 2s ease-in-out infinite',
         scaleIn: 'scaleIn 0.4s ease-out forwards',
+        'slide-up': 'slideUp 0.3s ease-out forwards',
       },
       keyframes: {
         fadeIn: {

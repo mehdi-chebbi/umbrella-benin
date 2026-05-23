@@ -7,6 +7,7 @@ import Button from '../ui/Button';
 const navLinks = [
   { label: 'Accueil', path: '/' },
   { label: 'Indicateurs NDT', path: '/indicateurs' },
+  { label: 'Géoportail', path: '/geoportail' },
   { label: 'À propos', path: '/a-propos' },
 ];
 

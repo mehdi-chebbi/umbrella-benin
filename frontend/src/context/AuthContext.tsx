@@ -1,57 +1,59 @@
-import { createContext, useState, useEffect, useCallback, type ReactNode } from 'react';
-import { AdminUser } from '../types';
-import { apiClient } from '../api/client';
+import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react';
+import api from '@/services/api';
 
-interface AuthContextType {
-  user: AdminUser | null;
-  token: string | null;
-  isLoading: boolean;
-  login: (username: string, password: string) => Promise<{ success: boolean; message?: string }>;
-  logout: () => void;
+interface User {
+  id: number;
+  username: string;
+  email: string;
+  full_name: string;
+  role: string;
 }
 
-export const AuthContext = createContext<AuthContextType>({
-  user: null,
-  token: null,
-  isLoading: true,
-  login: async () => ({ success: false }),
-  logout: () => {},
-});
+interface AuthContextType {
+  user: User | null;
+  token: string | null;
+  loading: boolean;
+  login: (username: string, password: string) => Promise<void>;
+  logout: () => void;
+  isAuthenticated: boolean;
+  isAdmin: boolean;
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<AdminUser | null>(null);
-  const [token, setToken] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [user, setUser] = useState<User | null>(null);
+  const [token, setToken] = useState<string | null>(localStorage.getItem('umbrella_token'));
+  const [loading, setLoading] = useState(true);
+
+  const fetchUser = useCallback(async () => {
+    try {
+      const response = await api.get('/auth/me');
+      setUser(response.data.user);
+    } catch {
+      localStorage.removeItem('umbrella_token');
+      setToken(null);
+      setUser(null);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
-    const storedToken = localStorage.getItem('umbrella_token');
-    if (storedToken) {
-      setToken(storedToken);
-      apiClient.getMe().then((response) => {
-        if (response.success && response.data) {
-          setUser(response.data);
-        } else {
-          localStorage.removeItem('umbrella_token');
-          setToken(null);
-        }
-        setIsLoading(false);
-      });
+    if (token) {
+      fetchUser();
     } else {
-      setIsLoading(false);
+      setLoading(false);
     }
-  }, []);
+  }, [token, fetchUser]);
 
-  const login = useCallback(async (username: string, password: string) => {
-    const response = await apiClient.login({ username, password });
-    if (response.success && response.data) {
-      const { token: newToken, user: newUser } = response.data;
-      localStorage.setItem('umbrella_token', newToken);
-      setToken(newToken);
-      setUser(newUser);
-      return { success: true };
-    }
-    return { success: false, message: response.message };
-  }, []);
+  const login = async (username: string, password: string) => {
+    const response = await api.post('/auth/login', { username, password });
+    const { token: newToken, user: userData } = response.data;
+    localStorage.setItem('umbrella_token', newToken);
+    setToken(newToken);
+    setUser(userData);
+  };
 
   const logout = useCallback(() => {
     localStorage.removeItem('umbrella_token');
@@ -59,9 +61,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(null);
   }, []);
 
+  const isAuthenticated = !!user;
+  const isAdmin = user?.role === 'admin';
+
   return (
-    <AuthContext.Provider value={{ user, token, isLoading, login, logout }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        token,
+        loading,
+        login,
+        logout,
+        isAuthenticated,
+        isAdmin,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
 }
+
+export function useAuth() {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+}
+
+export default AuthContext;
