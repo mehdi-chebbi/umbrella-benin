@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer';
 import BackToTop from './components/ui/BackToTop';
 import ProtectedRoute from './components/ProtectedRoute';
 import ChatAgent from './components/ChatAgent';
+import ScrollToTop from './components/ScrollToTop';
 import Accueil from './pages/Accueil';
 import Indicateurs from './pages/Indicateurs';
 import APropos from './pages/APropos';
@@ -20,6 +21,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
+        <ScrollToTop />
         <Routes>
           {/* Public pages with Navbar + Footer */}
           <Route
